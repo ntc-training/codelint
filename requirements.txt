@@ -1,0 +1,11 @@
+black
+pylint
+pyflakes
+pycodestyle
+pydocstyle
+pylama
+flake8
+bandit
+
+yamllint
+ansible-lint

@@ -8,7 +8,14 @@ def long_function_name(var_one, var_two, var_three, var_four):
     print(var_one)
 
 
-result = some_function_that_takes_arguments("a", "b", "c", "d", "e", "f",)
+result = some_function_that_takes_arguments(
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+)
 
 my_list = [
     1,

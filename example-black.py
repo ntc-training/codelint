@@ -1,14 +1,13 @@
 # Arguments on first line forbidden when not using vertical alignment.
-foo = long_function_name(
-    var_one, var_two, var_three, var_four, var_five, var_six, var_seven
-)
+
 
 # Further indentation required as indentation is not distinguishable.
-def long_function_name(var_one, var_two, var_three, var_four):
+def long_function_name(var_one, var_two="0", var_three="0", var_four="0", var_five="0", var_six="0"):
     print(var_one)
 
 
-result = some_function_that_takes_arguments("a", "b", "c", "d", "e", "f",)
+
+result = long_function_name("a", "b", "c", "d", "e", "f")
 
 my_list = [
     1,
@@ -20,3 +19,8 @@ my_list = [
 ]
 
 x = {"a": 37, "b": 42, "c": 927}
+
+
+foo = long_function_name(my_list[0], my_list[1], my_list[2], my_list[3], my_list[4], my_list[5])
+
+xx = long_function_name(x)

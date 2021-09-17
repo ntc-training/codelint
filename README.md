@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/networktocode/codelint.svg?branch=master)](https://travis-ci.com/networktocode/codelint)
+[![Build Status](https://app.travis-ci.com/networktocode/codelint.svg?branch=master)](https://app.travis-ci.com/github/networktocode/codelint)
 
 # Code Linting & Formatting Showcase
 

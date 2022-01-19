@@ -5,24 +5,36 @@ on:
       - "main"
   pull_request:
 jobs:
-  lint_code:
+  yamllint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.8", "3.9"]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install yamllint black pylama
-      - name: Execute linters
+          python -m pip install yamllint
+      - name: Linting - YAML
+        run: find . -name '*.yml' | xargs yamllint -s
+  black:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install dependencies
         run: |
-          find . -name '*.yml' | xargs yamllint -s
-          black -v --check .
-          pylama -i E501 .
+          python -m pip install --upgrade pip
+          python -m pip install black
+      - name: Linting - black
+        run: black -v --check .
+  pylama:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pylama
+      - name: Linting - pylama
+        run: pylama -i E501 .

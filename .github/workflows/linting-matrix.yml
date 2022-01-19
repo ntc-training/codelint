@@ -1,4 +1,4 @@
-name: Lint code in repository
+name: Compact Linting with Matrix
 on:
   push:
     branches:

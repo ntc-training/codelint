@@ -7,8 +7,9 @@ on:
 jobs:
   lint_code:
     runs-on: ubuntu-latest
-    matrix:
-      python-version: ["3.8", "3.9"]
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9"]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2

@@ -1,5 +1,7 @@
+---
+
 name: Lint code in repository
-on:
+"on":
   push:
     branches:
       - "main"

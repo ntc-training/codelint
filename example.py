@@ -3,10 +3,16 @@ def long_function_name(var_one, var_two, var_three, var_four):
     print(var_one)
 
 
+var_one, var_two, var_three, var_four, var_five, var_six, var_seven = 1
 # Arguments on first line forbidden when not using vertical alignment.
 foo = long_function_name(
     var_one, var_two, var_three, var_four, var_five, var_six, var_seven
 )
+
+
+def some_function_that_takes_arguments(one, two, three, four, five, six):
+    return None
+
 
 result = some_function_that_takes_arguments(
     "a",

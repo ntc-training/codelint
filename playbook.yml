@@ -1,4 +1,5 @@
 ---
+
 # This comment is indented at the wrong level
 - name: DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS
   hosts: iosxe,vmx
@@ -18,4 +19,3 @@
 
     - cli_config:
         msg: A task without a name, so lazy!
-  

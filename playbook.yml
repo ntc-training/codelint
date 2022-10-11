@@ -22,3 +22,4 @@
 
     - cli_config:
         msg: A task without a name, so lazy!
+---

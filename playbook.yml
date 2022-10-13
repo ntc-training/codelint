@@ -14,8 +14,9 @@
         set snmp contact JAMES_CHARLES
         set snmp community public authorization read-only
   tasks:
-    - name: Task 1 - ensure snmp commands exist on ios and vmx devices
-      cli_config:
-        config:"{{ vendor_commands[ansible_network_os] }}"
-    - cli_config:
-        msg:"A task without a name, so lazy!"
+    - name: TASK 1 - ENSURE SNMP AVAIL ON IOS AND OTHER DEVICES
+      ansible.netcommon.cli_config:
+        config: "{{ vendor_commands[ansible_network_os] }}"
+    - name: TASK-2 PRINT THE MSG
+      ansible.netcommon.cli_config:
+        msg: "A task without a name, so lazy!"

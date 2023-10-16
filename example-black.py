@@ -1,6 +1,11 @@
 # Further indentation required as indentation is not distinguishable.
-def long_function_name(var_one, var_two, var_three, var_four):
+def long_function_name(var_one, var_two, var_three, var_four, var_five, var_six):
     print(var_one)
+    print(var_two)
+    print(var_three)
+    print(var_four)
+    print(var_five)
+    print(var_six)
 
 
 my_list = [
@@ -13,9 +18,7 @@ my_list = [
 ]
 
 # Arguments on first line forbidden when not using vertical alignment.
-foo = long_function_name(
-    my_list[0], my_list[1], my_list[2], my_list[3], my_list[4], my_list[5], my_list[6]
-)
+foo = long_function_name(my_list[0], my_list[1], my_list[2], my_list[3], my_list[4], my_list[5])
 
 result = long_function_name("a", "b", "c", "d", "e", "f",)
 

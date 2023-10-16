@@ -1,12 +1,11 @@
-# Arguments on first line forbidden when not using vertical alignment.
+#! /usr/bin/env python
+
 foo = long_function_name(
     var_one, var_two, var_three, var_four, var_five, var_six, var_seven
 )
 
-# Further indentation required as indentation is not distinguishable.
 def long_function_name(var_one, var_two, var_three, var_four):
     print(var_one)
-
 
 result = some_function_that_takes_arguments("a", "b", "c", "d", "e", "f",)
 

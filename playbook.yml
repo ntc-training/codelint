@@ -19,6 +19,6 @@
     - name: Task 1 - ensure snmp commands exist on ios and vmx devices
       cli_config:
         config: "{{ vendor_commands[ansible_network_os] }}"
-
-    - cli_config:
+    - name : Task 2 - output message
+      cli_config:
         msg: A task without a name, so lazy!

@@ -1,24 +1,26 @@
+---
+# This comment is indented at the wrong level
 
-  # This comment is indented at the wrong level
-- name: DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS BASED ON THE NETWORK OS TYPE FROM A DICTIONARY
+- name: DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS BASED ON NETWORK OS
   hosts: iosxe,vmx
 
   vars:
     ansible_connection: network_cli
-    vendor_commands :
+    vendor_commands:
       ios: |
         snmp-server community ntc-team RO
         snmp-server location FL_HQ
         snmp-server contact JAMES_CHARLES
-      ios: |
+      junos: |
         set snmp location FL_HQ
         set snmp contact JAMES_CHARLES
         set snmp community public authorization read-only
 
   tasks:
-    - name: Task 1 - ensure snmp commands exist on ios and vmx devices
+    - name: TASK 1 - ENSURE SNMP COMMANDS EXIST ON IOS AND VMX DEVICES
       cli_config:
         config: "{{ vendor_commands[ansible_network_os] }}"
 
-    - cli_config:
+    - name: TASK 2 - LAZY MESSAGE
+      cli_config:
         msg: A task without a name, so lazy!

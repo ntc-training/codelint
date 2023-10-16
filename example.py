@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 # Arguments on first line forbidden when not using vertical alignment.
 foo = long_function_name(var_one, var_two, var_three, var_four, var_five, var_six, var_seven)
 

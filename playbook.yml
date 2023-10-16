@@ -1,3 +1,4 @@
+---
 # This comment is indented at the wrong level
 - name: DEPLOYING SNMP CONFIGS BASED ON NETWORK OS TYPE FROM A DICT
   hosts: iosxe,vmx

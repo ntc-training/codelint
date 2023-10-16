@@ -1,4 +1,3 @@
-
 # Further indentation required as indentation is not distinguishable.
 def long_function_name(var_one, var_two, var_three, var_four):
     print(var_one)
@@ -7,13 +6,13 @@ def long_function_name(var_one, var_two, var_three, var_four):
     print(var_four)
     return "something"
 
-    
+
 def some_function_that_takes_arguments(one, two, three, four, five, six):
-    print(one)    
-    print(two)    
-    print(three)    
-    print(four)    
-    print(five)    
+    print(one)
+    print(two)
+    print(three)
+    print(four)
+    print(five)
     print(six)
     return "something again"
 
@@ -21,7 +20,14 @@ def some_function_that_takes_arguments(one, two, three, four, five, six):
 # Arguments on first line forbidden when not using vertical alignment.
 foo = long_function_name("1", "2", "3", "4")
 
-result = some_function_that_takes_arguments("a", "b", "c", "d", "e", "f",)
+result = some_function_that_takes_arguments(
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+)
 
 my_list = [
     1,

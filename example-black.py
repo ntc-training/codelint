@@ -1,18 +1,16 @@
-# Further indentation required as indentation is not distinguishable.
-def long_function_name(var_one, var_two, var_three, var_four, var_five, var_six):
-    print(var_one)
-    print(var_two)
-    print(var_three)
-    print(var_four)
-    print(var_five)
-    print(var_six)
+from ansiblelint.rules import AnsibleLintRule
 
 
-my_list = [1, 2, 3, 4, 5, 6,]
+class CapitalNamesRule(AnsibleLintRule):
+    id = "CUSTOMRULE001"
+    shortdesc = "All task names should be capitalized"
+    description = (
+        "Using all uppercase names creates uniformity and improves readability"
+    )
+    severity = "HIGH"
+    tags = ["formatting", "readability"]
 
-# Arguments on first line forbidden when not using vertical alignment.
-foo = long_function_name(my_list[0], my_list[1], my_list[2], my_list[3], my_list[4], my_list[5])
+    def matchtask(self, task, file):
+        if task.get("name") is not None:
+            return task.get("name") != task.get("name").upper()
 
-result = long_function_name("a", "b", "c", "d", "e", "f",)
-
-x = {"a": 37, "b": 42, "c": 927}

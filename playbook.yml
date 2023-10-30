@@ -1,7 +1,8 @@
 ---
-#This comment is indented at the wrong level
-  name: "DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS\
-         BASED ON THE NETWORK OS TYPE FROM A DICTIONARY"
+# This comment is indented at the wrong level
+  name: >- 
+    DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS
+    BASED ON THE NETWORK OS TYPE FROM A DICTIONARY
   hosts: ios,junos
   vars:
     ansible_connection: network_cli

@@ -12,9 +12,10 @@ result = some_function_that_takes_arguments(
     'd', 'e', 'f',
     )
 
-my_list = [
-    1, 2, 3,
-    4, 5, 6,
-]
+my_list = [1, 2, 3, 4, 5, 6]
 
-x = {  'a':37,'b':42,  'c':927}
+x = {
+    "a": 37,
+    "b": 42,  
+    "c": 927
+}

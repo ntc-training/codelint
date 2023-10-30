@@ -1,5 +1,5 @@
-
-  # This comment is indented at the wrong level
+---
+# This comment is indented at the wrong level
 - name: DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS BASED ON THE NETWORK OS TYPE FROM A DICTIONARY
   hosts: iosxe,vmx
 
@@ -20,5 +20,5 @@
       cli_config:
         config: "{{ vendor_commands[ansible_network_os] }}"
 
-    - cli_config:
+    - debug:
         msg: A task without a name, so lazy!

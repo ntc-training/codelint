@@ -1,15 +1,16 @@
 ---
-  # This comment is indented at the wrong level
-- name: "DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS BASED ON THE NETWORK OS TYPE FROM A DICTIONARY"
-  hosts: iosxe,vmx
+#This comment is indented at the wrong level
+  name: "DEPLOYING SNMP CONFIGURATIONS ON IOS AND JUNOS\
+         BASED ON THE NETWORK OS TYPE FROM A DICTIONARY"
+  hosts: ios,junos
   vars:
     ansible_connection: network_cli
       vendor_commands:
-      iosxe:
+      ios:
         - snmp-server community ntc-team RO
         - snmp-server location FL_HQ
         - snmp-server contact JAMES_CHARLES
-      vmx:
+      junos:
         - set snmp location FL_HQ
         - set snmp contact JAMES_CHARLES
         - set snmp community public authorization read-only
